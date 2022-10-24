@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.container{
+    width: 100%;
+}
+.section-box .list-box {
+  display: flex;
+}
+
+.section-box {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-box .box,
+.section-box .box::before,
+.section-box .box::after {
+  box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.7);
+}
+
+.section-box .box {
+  width: 90%;
+  max-width: 280px;
+  background-color: #543265;
+  padding: 25px 15px;
+  border-radius: 5px 25px 25px 25px;
+  position: relative;
+
+  margin: 0 15px;
+}
+.section-box .box::before,
+.section-box .box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  border-radius: 25px;
+  transition: transform 0.2s linear;
+}
+.section-box .box:hover::before,
+.section-box .box:hover::after {
+  transform: skewY(0);
+}
+.section-box .box::before {
+  transform: skewY(10deg);
+  background-color: #8147cf;
+  bottom: -20px;
+  z-index: -1;
+}
+.section-box .box::after {
+  transform: skewY(15deg);
+  background-color: #1aa5e5;
+  bottom: -35px;
+  z-index: -2;
+}
+
+.section-box .box.one {
+  border-top: 3px solid #da606f;
+}
+.section-box .box.two {
+  border-top: 3px solid #ff8c6c;
+}
+
+.section-box .top {
+  display: flex;
+  justify-content: space-between;
+}
+.section-box .box .mini-title {
+  color: #aaa;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.section-box .box .logo {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.section-box .box .content {
+  margin-top: 30px;
+}
+.section-box .box .big-title {
+  color: #fff;
+  font-size: 32px;
+}
+.section-box .box .text {
+  color: #eee;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.section-box .box .details {
+  list-style: none;
+  margin-top: 25px;
+}
+.section-box .box .details .detail {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.section-box .box .details .detail-icon {
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  background-color: #2a1035;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 10px;
+}
+.section-box .box .details .detail-name {
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #eee;
+}
+
+@media screen and (max-width: 600px) {
+  .section-box {
+    height: auto;
+    padding: 50px 0;
+  }
+  .section-box .list-box {
+    flex-direction: column;
+  }
+  .section-box .list-box .box:not(:first-child) {
+    margin-top: 80px;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;300;600;700&display=swap");
+}
+
+    </style>
+<div class="container">
+    
+<ul>
+    <li><a class="active" href="index.html">Anasayfa</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div style="width:100% ;"><marquee behavior="" direction="right"><h1>EMİRHAN</h1></marquee></div>
+  <div style="width: 100%;">
+    <section class="section-box">
+        <div class="list-box">
+          <div class="box one">
+         
+            <div class="bottom content">
+              <h2 class="big-title">
+             Ben Kimim
+              </h2>
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna
+                aliqua.
+              </p>
+       
+            </div>
+          </div>
+          <div class="box two">
+         
+            <div class="bottom content">
+              <h2 class="big-title">
+                Kariyerim
+              </h2>
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+                dolore magna
+                aliqua.
+              </p>
+          
+            </div>
+          </div>
+        </div>
+      </section>
+      <div style="width:100%;border: 1px solid #aaa;background-color:#aaa ;margin-top: 100px;height: 600px;">
+        <div style="width: 70%;height: 400px;float: left;">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam earum sit illum eum praesentium cumque id officia beatae repudiandae quaerat suscipit, deleniti quisquam. Aperiam nihil hic consequatur rerum earum dolore!</p></div>
+        <div style="width: 29%;height: 400px;float: left;"><img style="width:540px ;" src="data:image/jpeg;base64,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" alt=""></div>
+
+
+      </div>
+</div>
+</div>
+
+</body>
+</html>
